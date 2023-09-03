@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+}
+
+
+.alert-box {
+  background-color: #f8d7da; 
+  border: 1px solid #dc3545;
+  padding: 10px; 
+  margin: 1rem;
+  border-radius: 5px; 
+}
+
+/* Estilos generales para el contenedor principal */
+.app-container {
+  display: grid; /* Utiliza un grid container */
+  grid-template-columns: 1fr 1fr; /* Divide el espacio en dos columnas iguales */
+  grid-gap: 20px;
+}
+
