@@ -2,9 +2,8 @@ import { Table } from "react-bootstrap";
 
 const Listado = ({ noteFilter }) => {
   const info = noteFilter.map((item) => (
-    <tr key={item.id}>
-      <td>{item.id}</td>
-      <td>{item.nombre}</td>
+    <tr key={item.telefono}>
+      <td scope="row">{item.nombre}</td>
       <td>{item.correo}</td>
       <td>{item.edad}</td>
       <td>{item.cargo}</td>
@@ -17,20 +16,21 @@ const Listado = ({ noteFilter }) => {
   ));
 
   return (
-    <Table variant="dark" className="table table-striped">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Correo</th>
-          <th>Edad</th>
-          <th>Cargo</th>
-          <th>Telefono</th>
-          <th>Eliminar</th>
-        </tr>
-      </thead>
-      <tbody>{info}</tbody>
-    </Table>
+      <div className="col-md-7">
+        <Table variant="dark" className="table table-responsive table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Cargo</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>{info}</tbody>
+      </Table>
+      </div>    
   );
 };
 

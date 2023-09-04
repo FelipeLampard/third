@@ -1,11 +1,12 @@
 import React from 'react';
+import { Alert } from 'react-bootstrap';
 
-const Alert = ({ color, msg }) => {
+const Alerta = ({ color, msg }) => {
   return (
-    <div className={`alert-box ${color}`}>
+    <Alert key={color} variant={color} className='mt-3'>
       {msg}
-    </div>
+    </Alert>
   );
 }
 
-export default Alert;
+export default Alerta;
